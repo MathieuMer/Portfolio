@@ -1,0 +1,110 @@
+//A-side
+aside {
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 30%,
+                 rgba(255, 255, 255, 0.1) 39%, 
+                 rgba(0, 0, 0, 0.2) 45%,
+                 rgba(230, 170, 170, 0.1) 60%,
+                 rgba(0, 0, 0, 0.6) 65%,
+                 rgba(255, 255, 255, 0.1) 80%,
+                 rgba(0, 0, 0, 0.5) 95%);
+    border-right: 1px solid #ffffff31;
+    box-shadow: 0px 10px 10px $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //border-right: 2px $orange ridge;
+    backdrop-filter: blur(3px) contrast(80%) brightness(80%);
+    
+}
+
+// Logo Mathieu Mercier, développeur web
+.title {
+    padding: 1rem 0;
+    text-align: center;
+    &__name {
+        color: $light-grey;
+        font-family: 'Saira Stencil One', cursive;
+        font-size: 1.5rem;
+        letter-spacing: 0.20rem;
+        &--color {
+            color: $orange;
+        }
+    }
+    &__description {
+        color: $white;
+        font-size: 0.6rem;
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 0.7rem;
+        padding-left: 0.4rem;
+        margin-top: -0.2rem;;
+    }
+}
+
+// Photo
+.portrait {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin: 2rem 0;
+    border: 3px solid $light-grey;
+}
+
+nav {
+    padding: 1rem 0 0 0;
+}
+
+//Liste  de navigation
+nav li {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-family: 'Saira', sans-serif;
+    & a {
+        color: $light-grey;   
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+}
+
+nav li:not(.active):hover {
+    & a {
+        color: $white;
+        &:after {
+            content: '>';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            left: 100%;
+            bottom: 0;
+            color: $orange;
+            font-weight: bolder;
+            text-align: right;
+        }
+    }
+}
+
+nav .active{
+    color: $white;
+}
+
+//Socials
+.nav__socials {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0 0 0;
+    color: $light-grey;
+    & a {
+        transition: all 0.3s ease-in-out;
+        color: $light-grey;
+    }
+}
+
+.nav__socials {
+    & a:hover {
+        transform: scale(1.2);
+        color: $orange;
+    }
+    
+}

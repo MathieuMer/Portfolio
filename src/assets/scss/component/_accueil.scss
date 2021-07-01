@@ -1,0 +1,80 @@
+.bloc-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    color: $light-grey2;
+    overflow: hidden;
+    &__titre {
+        width: 100%;
+        padding: 6rem 0 0 6rem;
+        & p {
+            font-size: 3rem;
+            opacity: 0;
+            animation: Apparition ease-in forwards;
+            animation-duration: 0.8s;
+            animation-delay: 0.5s;
+        }
+        & h2 {
+            font-size: 1.5rem;
+            padding: 1rem 0 0 3rem;
+            opacity: 0;
+            animation: Apparition ease-in-out forwards;
+            animation-duration: 0.8s;
+            animation-delay: 1.5s;
+        }
+    }
+    &__bouttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin: 4rem 0 0 0;
+        padding: 1rem 10rem 1rem 0;
+        &__item {
+            display: block;
+            margin-top: 2rem;
+            color: $light-grey2;
+            border: 1px solid $light-grey2;
+            box-shadow: $ombre1;
+            transition: border $transition-time, box-shadow $transition-time, color $transition-time;
+            &:hover {
+                border: 1px solid $white;
+                color: $white;
+                transition: border $transition-time, box-shadow $transition-time, color $transition-time;
+                box-shadow: $ombre2;
+            }
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            opacity: 0;
+            animation: Apparition2 ease-in forwards;
+            animation-duration: 0.8s;
+            animation-delay: 2.5s;
+        }
+    }
+}
+
+@keyframes Apparition {
+    0% {
+        opacity: 0;
+        transform: translateX(0.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Apparition2 {
+    0% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,36 @@
+#bloc-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    //background: rgba($color: $black, $alpha: 0.3);
+    
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
+}
+
+// Aside
+aside {
+    width: 25%;
+    min-height: 100vh;
+}
+
+// Main = conteneur de topbar et onglet
+main {
+    width: 75%;
+    min-height: 100vh;
+    padding: 2rem;
+    
+}
+
+.topbar {
+    width: 100%;
+    height: 10%;
+}
+
+.onglet {
+    width: 100%;
+    height: 90%;
+}

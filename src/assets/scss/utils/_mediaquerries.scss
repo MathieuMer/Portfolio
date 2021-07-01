@@ -1,0 +1,71 @@
+//--------------MEDIA QUERY MANAGER----------
+/*
+0 - 600px: phone
+600 - 900: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: desktop
+1800 - 2560px: desktop HD
+2560 et +: desktop 4K
+*/
+
+// Variables breakpoints media querries:
+$tab-port-mini: 767px;
+$tab-land-mini: 1023px;
+$desktop-mini: 1200px;
+$desktophd-mini: 1800px;
+$desktop4k-mini: 2560px;
+
+// Mixin media querries:
+/*
+Argument $device choice:
+tab-port : definit la structure tablette portrait
+tab-port-big
+tab-land
+desktop
+desktophd
+desktop4k
+*/
+@mixin responsive($device) {
+	@if $device == tab-port{
+		@media screen and(min-width: $tab-port-mini) and (orientation: portrait) {@content;}
+	}
+	@else if $device == tab-land{
+		@media screen and (min-width: $tab-land-mini) and (orientation: landscape) {@content;}
+	}
+	@else if $device == tab-port-big{
+		@media screen and (min-width: $tab-land-mini) and (orientation: portrait) {@content;}
+	}
+	@else if $device == desktop{
+		@media screen and(min-width: $desktop-mini) and(max-width: $desktophd-mini) {@content;}
+	}
+	@else if $device == desktophd{
+		@media screen and(min-width: $desktophd-mini) and(max-width: $desktop4k-mini) {@content;}
+	}
+	@else if $device == desktop4k{
+		@media screen and(min-width: $desktop4k-mini) {@content;}
+	}
+}
+
+// Font-size de base adaptative selon la taille de l'écran, tout s'adapte en fonction de $base-font-size
+
+$base-font-size: 16px;
+$base-font-size-tab: 18px;
+$base-font-size-medium: 20px;
+$base-font-size-hd: 22px;
+$base-font-size-4k: 40px;
+
+html{
+    font-size: $base-font-size;
+    @include responsive(tab-port-big) {
+        font-size: $base-font-size-tab;
+    }
+	@include responsive(desktop) {
+        font-size: $base-font-size-medium;
+    }
+    @include responsive(desktophd) {
+        font-size: $base-font-size-hd;
+    }
+    @include responsive(desktop4k) {
+        font-size: $base-font-size-4k;
+    }
+}
