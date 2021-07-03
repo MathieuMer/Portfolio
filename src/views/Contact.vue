@@ -1,27 +1,50 @@
 <template>
-  <form class="contact-form" @submit.prevent="sendEmail">
-    <label>Name</label>
-    <input type="text" name="user_name">
+  <div>
+    <form class="contact-form" @submit.prevent="sendEmail">
+    <label>Nom</label>
+    <input class="input-style" v-model="name" type="text" name="user_name" required>
     <label>Email</label>
-    <input type="email" name="user_email">
+    <input class="input-style" v-model="email" type="email" name="user_email" required>
     <label>Message</label>
-    <textarea name="message"></textarea>
-    <input type="submit" value="Send">
+    <textarea name="message" v-model="message" rows="8" required></textarea>
+    <input class="submit-button" type="submit" value="Envoyer">
   </form>
+  <p v-if="emailSent" class="contact__success">
+    Merci pour votre message. Je vous répondrai dès des possible.
+  </p>
+  </div>
 </template>
 
 <script>
 import emailjs from 'emailjs-com';
 
 export default {
+  name: 'Contact',
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      emailSent: false
+    }
+  },
   methods: {
-    sendEmail: (e) => {
-      emailjs.sendForm('service_hci0lwc', 'template_zzcminq', e.target, 'user_FpGnVlCs4brXMucs0Xs5q')
-        .then((result) => {
+    sendEmail: function(e) {
+      emailjs.sendForm('service_hci0lwc', 'template_zzcminq', e.target, 'user_FpGnVlCs4brXMucs0Xs5q', {
+          user_name: this.name,
+          user_email: this.email,
+          message: this.message
+      })
+      .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
+            this.emailSent = true
+            this.name = ''
+            this.email = ''
+            this.message = ''
+      })
+      .catch((error) => {
+          console.log({error})
+      })
     }
   }
 }

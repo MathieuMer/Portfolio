@@ -10,14 +10,14 @@
         width: 100%;
         padding: 6rem 0 0 6rem;
         & p {
-            font-size: 3rem;
+            font-size: 4rem;
             opacity: 0;
             animation: Apparition ease-in forwards;
             animation-duration: 0.8s;
             animation-delay: 0.5s;
         }
         & h2 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             padding: 1rem 0 0 3rem;
             opacity: 0;
             animation: Apparition ease-in-out forwards;
@@ -31,7 +31,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-end;
-        margin: 4rem 0 0 0;
+        margin: 8rem 0 0 0;
         padding: 1rem 10rem 1rem 0;
         &__item {
             display: block;

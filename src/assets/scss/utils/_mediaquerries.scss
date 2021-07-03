@@ -47,7 +47,7 @@ desktop4k
 }
 
 // Font-size de base adaptative selon la taille de l'écran, tout s'adapte en fonction de $base-font-size
-
+$base-font-size-sm: 14px;
 $base-font-size: 16px;
 $base-font-size-tab: 18px;
 $base-font-size-medium: 20px;
@@ -56,15 +56,6 @@ $base-font-size-4k: 40px;
 
 html{
     font-size: $base-font-size;
-    @include responsive(tab-port-big) {
-        font-size: $base-font-size-tab;
-    }
-	@include responsive(desktop) {
-        font-size: $base-font-size-medium;
-    }
-    @include responsive(desktophd) {
-        font-size: $base-font-size-hd;
-    }
     @include responsive(desktop4k) {
         font-size: $base-font-size-4k;
     }

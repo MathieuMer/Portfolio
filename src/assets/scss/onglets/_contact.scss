@@ -1,0 +1,45 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    & .input-style {
+        width: 100%;
+        outline: none;
+        border: none;
+        height: 1.3rem;
+    }
+    & textarea {
+        width: 100%;
+        resize: none;
+        outline: none;
+        border: none;
+    }
+    & label {
+        padding: 1rem 0 0.5rem 0;
+    }
+    & .submit-button {
+        margin: 1rem auto 0 auto;
+        padding: 0.5rem 1rem;
+        font-family: 'Montserrat', sans-serif;
+        outline: none;
+        border: 1px solid $light-grey2;
+        color: $light-grey2;
+        background-color: transparent;
+        box-shadow: $ombre1;
+        transition: border $transition-time, box-shadow $transition-time, color $transition-time;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid $white;
+            color: $white;
+            box-shadow: $ombre2;
+            transition: border $transition-time, box-shadow $transition-time, color $transition-time;
+        }
+    }
+}
+.contact__success {
+    text-align: center;
+}

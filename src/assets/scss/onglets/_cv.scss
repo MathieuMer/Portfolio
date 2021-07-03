@@ -1,0 +1,57 @@
+.cv__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.cv__entete {
+    width: 100%;
+}
+.cv__bloc {
+    width: 50%;
+    padding: 1rem;
+    & h3 {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
+.cv__formation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cv__bloc__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+
+.bloc__interne {
+    padding-left: 2rem;
+    border-left: 1px solid $light-grey2;
+    & ul {
+        list-style: square inside;
+        padding-bottom: 0.5rem;
+    }
+}
+.cv__diplome {
+    padding: 1rem 0;
+}
+.cv__experience {
+    padding: 1rem 0;
+}
+.cv__date {
+    padding-bottom: 0.5rem;
+}
+.cv__experience__poste {
+    padding-bottom: 0.5rem;
+}
+.cv__diplome__nom {
+    padding-bottom: 0.5rem;
+}
