@@ -7,17 +7,10 @@ aside {
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 30%,
-                 rgba(255, 255, 255, 0.1) 39%, 
-                 rgba(0, 0, 0, 0.2) 45%,
-                 rgba(230, 170, 170, 0.1) 60%,
-                 rgba(0, 0, 0, 0.6) 65%,
-                 rgba(255, 255, 255, 0.1) 80%,
-                 rgba(0, 0, 0, 0.5) 95%);
+    background: rgba(0, 0, 0, 0.5);
     border-right: 1px solid #ffffff31;
     box-shadow: 0px 10px 10px $black;
     //border-right: 2px $orange ridge;
-    backdrop-filter: blur(3px) contrast(80%) brightness(80%);
 }
 
 // Logo Mathieu Mercier, développeur web

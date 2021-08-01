@@ -1,19 +1,46 @@
 .cv__container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 .cv__entete {
-    width: 100%;
+    width: 82%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cv__pdf {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    & a {
+        text-decoration: none;
+        color: $light-grey2;
+    }
+}
+.cv__bloc--50 {
+    width: 46%;
 }
 .cv__bloc {
-    width: 50%;
+    //flex-grow: 1;
     padding: 1rem;
+    border: 1px solid $light-grey2;
+    border-radius: 1rem;
+    margin: 1rem 1%;
+    background: rgba(0, 0, 0, 0.6);
     & h3 {
         width: 100%;
         padding: 1rem 0;
+        border: 2px solid $tercary-color;
+        border-radius: 1rem 1rem 1rem 0;
         text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $light-grey2;
     }
 }
 .cv__formation {
@@ -22,22 +49,30 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-
+.cv__competences {
+    width: 94%;
+}
 .cv__bloc__item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+   
     
 }
 
 
 .bloc__interne {
-    padding-left: 2rem;
-    border-left: 1px solid $light-grey2;
+    padding-left: 1rem;
+    border-left: 2px solid $tercary-color;
     & ul {
         list-style: square inside;
         padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        color: $light-grey2;
+        & li {
+            padding-top: 0.2rem;
+        }
     }
 }
 .cv__diplome {
@@ -48,10 +83,138 @@
 }
 .cv__date {
     padding-bottom: 0.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: $tercary-color;
+    &:before {
+        content:'';
+        position: absolute;
+        height: 0.6rem;
+        width: 0.6rem;
+        background: $tercary-color;
+        top: 50%;
+        transform: translateY(-100%);
+        left: -1.35rem;
+       
+    }
 }
 .cv__experience__poste {
     padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: $secondary-color;
+    font-weight: bolder;
 }
 .cv__diplome__nom {
     padding-bottom: 0.5rem;
+}
+
+.cv__lieu {
+    color: $light-grey;
+}
+.cv__language {
+    padding: 1rem 0;
+}
+.cv__language__haut {
+    display: flex;
+}
+.cv__language__bas {
+    display: flex;
+}
+.cv__langue__flag {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 1rem;
+}
+.cv__langue__progressbar {
+    padding-top: 0.5rem;
+}
+.progress__out {
+    height: 1.4rem;
+    width: 100%;
+    border: 2px solid $white;
+    border-radius: 0.7rem;
+    
+    display: flex;
+    align-content: center;
+    justify-content: left;
+}
+.progress__in {
+    border-radius: 0.7rem;
+    margin: 0.1rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    color: $black;
+    font-size: 0.7rem;
+}
+.progress__in--fr {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,26,26,1) 10%, rgba(0,255,29,1) 80%);
+}
+.progress__in--en {
+    width: 70%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,26,26,1) 10%, rgba(45,212,28,1) 100%);
+}
+.progress__in--es {
+    width: 60%;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,26,26,1) 10%, rgba(80,179,28,1) 100%);
+}
+.bloc__competences {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.cv__techno {
+    margin-top: 1rem;
+    position: relative;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & p {
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+}
+.cv__competences svg {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+}
+.cv__techno__number {
+    position: absolute;
+    top: 33px;
+    width: 100%;
+    text-align: center;
+    color: $light-grey;
+    & span {
+        font-size: 0.8rem;
+    }
+}
+.cv__competences svg circle {
+    width: 80px;
+    height: 80px;
+    fill: none;
+    stroke-width: 10;
+    stroke: transparent;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+}
+.cv__competences svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: transparent;
+}
+// Réglage cercles compétences
+.competence__html circle:nth-child(2){
+    stroke: $orange;
+    stroke-dashoffset: calc(220 - (220 * 90)/100);
+}
+.competence__css circle:nth-child(2){
+    stroke: $orange;
+    stroke-dashoffset: calc(220 - (220 * 80)/100);
+}
+.competence__js circle:nth-child(2), .competence__vue circle:nth-child(2), .competence__nodejs circle:nth-child(2){
+    stroke: $orange;
+    stroke-dashoffset: calc(220 - (220 * 60)/100);
 }
