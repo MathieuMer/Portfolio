@@ -1,6 +1,8 @@
 //A-side
 aside {
+    position: fixed;
     width: 25vw;
+    height: 100%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -11,6 +13,32 @@ aside {
     border-right: 1px solid #ffffff31;
     box-shadow: 0px 10px 10px $black;
     //border-right: 2px $orange ridge;
+    & ul {
+        list-style: none;
+    }
+    @include responsive(tab-port){
+        width: 100vw;
+        padding: 1rem 0;
+        margin-left: -100vw;
+        transition: 0.5s;
+    }
+}
+
+.menu__button {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    display: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    z-index: 100;
+    @include responsive(tab-port){
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        float: right;
+    }
 }
 
 // Logo Mathieu Mercier, développeur web
@@ -43,10 +71,16 @@ aside {
     border-radius: 50%;
     margin: 2rem 0;
     border: 3px solid $light-grey;
+    @include responsive(tab-port) {
+        display: none;
+    }
 }
 
 nav {
     padding: 1rem 0 0 0;
+    @include responsive(tab-port) {
+        padding: 3rem 0 0 0;
+    }
 }
 
 //Liste  de navigation
@@ -55,6 +89,9 @@ nav li {
     margin: 0.5rem 0;
     font-family: 'Saira', sans-serif;
     font-size: 1.2rem;
+    @include responsive(tab-port) {
+        font-size: 2rem;
+    }
     & a {
         color: $light-grey;   
         transition: all 0.3s ease-in-out;
@@ -91,6 +128,9 @@ nav .active{
     padding: 2rem 0 0 0;
     color: $light-grey;
     font-size: 1.5rem;
+    @include responsive(tab-port) {
+        font-size: 2rem;
+    }
     & a {
         transition: all 0.3s ease-in-out;
         color: $light-grey;

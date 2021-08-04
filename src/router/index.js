@@ -36,11 +36,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "CV" */ '../views/CV.vue')
   },
   { path: '', component: Accueil },
+  
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  scrollBehavior: (to, from) => {
+    console.log(to, from)
+    document.getElementById('main').scrollIntoView()
+    return null;
+  },
   routes
 })
+
+
 
 export default router

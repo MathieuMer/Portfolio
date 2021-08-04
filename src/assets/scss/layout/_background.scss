@@ -4,6 +4,8 @@ body {
             to right bottom, rgba($color: #2c0e00, $alpha: 0.5),
             rgba($color: #000000, $alpha: 0.7)),
         url("../images/background/pexels-benjamin-suter-3733269.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
     background-position: 25% 60%;
     background-attachment: fixed;
 }

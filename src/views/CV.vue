@@ -5,13 +5,7 @@
       <h2>Curriculum Vitæ</h2>
     </div>
 
-    <div class="cv__pdf cv__bloc">
-      <a href="/src/assets/download/CV-Dev-MathieuMERCIER.pdf" download>
-        <i class="fas fa-download"></i>
-      </a>
-    </div>
-
-    <div class="cv__experiences cv__bloc cv__bloc--50">
+    <div class="cv__experiences cv__bloc">
       <h3>Expériences professionelles</h3>
       <div class="cv__bloc__item">
         <div class="bloc__interne">
@@ -51,7 +45,7 @@
       </div>
     </div>
 
-    <div class="cv__formation cv__bloc cv__bloc--50">
+    <div class="cv__formation cv__bloc">
       <h3>Formation</h3>
       <div class="cv__bloc__item">
         <div class="bloc__interne">
@@ -79,7 +73,7 @@
       </div>      
     </div>
 
-    <div class="cv__langue cv__bloc cv__bloc--50">
+    <div class="cv__langue cv__bloc">
       <h3>Langues</h3>
       <div class="cv__bloc__item">
         <div class="bloc__interne">
@@ -126,7 +120,7 @@
       </div>
     </div>
 
-    <div class="cv__softskills cv__bloc cv__bloc--50">
+    <div class="cv__softskills cv__bloc">
       <h3>Soft-skills</h3>
       <div class="cv__bloc__item">
         <div class="bloc__interne">

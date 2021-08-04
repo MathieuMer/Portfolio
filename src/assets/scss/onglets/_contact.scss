@@ -1,3 +1,25 @@
+.contact-texte {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border: 1px solid $light-grey2;
+    border-radius: 1rem;
+}
+.contact-texte--verybig {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: $light-grey;
+}
+.contact-texte--big {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $light-grey;
+}
+.contact-texte--prenom {
+    text-align: right;
+    color: $light-grey;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -6,6 +28,12 @@
     width: 50%;
     margin: 0 auto;
     padding: 2rem 2rem;
+    @include responsive(tab-port){
+        width: 75%;
+    }
+    @include responsive(phone){
+        width: 100%;
+    }
     & .input-style {
         width: 100%;
         outline: none;

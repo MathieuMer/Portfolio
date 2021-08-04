@@ -1,8 +1,11 @@
 <template>
   <div class="bloc-accueil">
     <div class="bloc-accueil__titre">
-      <p><strong>Bonjour, je suis Mathieu,</strong></p>
+      
+      <p><span class="bloc-accueil__titre--span1">Bonjour,</span><br><span class="bloc-accueil__titre--span2">je suis Mathieu,</span></p>
+      
       <h2>développeur web freelance, spécialisé front-end</h2>
+      
     </div>
     <div class="bloc-accueil__bouttons">
       <router-link class="bloc-accueil__bouttons__item" to="/realisations">REALISATIONS</router-link>
