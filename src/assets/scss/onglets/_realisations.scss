@@ -8,24 +8,144 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 .rea__bloc {
     //flex-grow: 1;
-    padding: 1rem;
     border: 1px solid $light-grey2;
-    border-radius: 1rem;
     margin: 1rem 0;
     background: rgba(0, 0, 0, 0.6);
     & ul {
        padding-left: 2rem;
     }
 }
+.rea__container__miniatures {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+.rea__miniature {
+    width: 25%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    color: $light-grey2;
+    @include responsive(phone){
+        width: 50%;
+    }
+    &:hover h3{
+        transform: scale(1.15);
+        transition: 0.3s;
+        color: $light-grey2;
+    }
+    & h3 {
+        width: 75%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        border-top: 1px solid $light-grey2;
+        border-bottom: 1px solid $light-grey2;
+        transition: 0.3s;
+    }
+}
+
+// miniatures reas
+
+.rea1__miniature {
+    background-image: url("../images/rea1-timeline-mini.jpg");
+    background-repeat: no-repeat;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-size: 120%;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 1rem 0 0 1rem;
+    transition: background-size 2s;
+    @include responsive(phone){
+        border-radius: 1rem 0 0 0;
+    }
+    &:hover{
+        background-size: 180%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        transition: background-size 2s;
+    }
+}
+.rea2__miniature {
+    background-image: url("../images/portfolio-mini.jpg");
+    background-repeat: no-repeat;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-size: 120%;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 0;
+    transition: background-size 2s;
+    @include responsive(phone){
+        border-radius: 0 1rem 1rem 0;
+    }
+    &:hover{
+        background-size: 180%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        transition: background-size 2s;
+    }
+}
+.rea3__miniature {
+    background-image: url("../images/ohmyfood-mini.jpg");
+    background-repeat: no-repeat;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-size: 120%;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 0;
+    transition: background-size 2s;
+    @include responsive(phone){
+        border-radius: 0 0 0 1rem;
+    }
+    &:hover{
+        background-size: 180%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        transition: background-size 2s;
+    }
+}
+.rea4__miniature {
+    background-image: url("../images/rea2-fonctions-mini.jpg");
+    background-repeat: no-repeat;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-size: 120%;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 0 1rem 1rem 0;
+    transition: background-size 2s;
+    @include responsive(phone){
+        border-radius: 0 0 1rem 0;
+    }
+    &:hover{
+        background-size: 180%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        transition: background-size 2s;
+    }
+}
+
+.rea1__logo {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    @include responsive(phone){
+        width: 75%;
+    }
+}
 
 //========Boucle pour style des réa===============
 
-@for $i from 1 to 2 {
+@for $i from 1 to 5 {
     .rea#{$i}__container {
         width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
     }
     .rea#{$i}__titre {
         width: 100%;
@@ -53,6 +173,8 @@
     }
     .rea#{$i}__technos {
         width: 100%;
+        color: $white;
+        
         & ul {
             padding: 2rem 0 0 0;
             list-style: none;
@@ -62,18 +184,47 @@
                 display:inline;
                 padding: 0.5rem 1rem;
                 margin: 0.5rem;
-                border: 1px solid $light-grey2;
-                border-radius: 1rem;
+                border-radius: 5px;
+                box-shadow: inset -3px -2px 5px $black;
+                background-color: $secondary-color;
+                font-weight: bold;
             }
+        }
+    }
+    .rea#{$i}__repo {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 16rem;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        & a {
+            text-decoration: none;
+            color: $light-grey;
+            transition: color 0.3s;
+            &:hover {
+                color: $white;
+                transition: color 0.3s;
+            }
+        }
+    }
+    .rea4__image {
+        width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem 0;
+        @include responsive(phone){
+            width: 90%;
         }
     }
     #carouselRea#{$i} {
         width: 100%;
-        height: 25rem;
+        //height: 25rem;
         & .carousel-item {
-            height: 25rem;
+            //height: 25rem;
             & img {
-                max-height: 100%;
+                max-height: 400px;
                 margin: auto auto;
             }
         } 
@@ -91,5 +242,16 @@
         @include responsive(phone){
             width: 100%;
         }
+    }
+}
+
+.carousel-caption {
+    background-color: rgba($color: #FFFFFF, $alpha: 0.5);
+    color: black;
+    font-weight: bold;
+    border-radius: 1rem;
+    
+    & h5 {
+    font-weight: bold;
     }
 }

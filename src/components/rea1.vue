@@ -2,14 +2,15 @@
   <div class="rea1__container rea__bloc">
     <h3 class="rea1__titre">Réseau Social d'entreprise: Groupomania</h3>
     <h4 class="rea1__sous-titre">Conception Front-end et Back-end</h4>
+    <img class="rea1__logo" src="../assets/images/rea1-icon-left-font-monochrome-white2.png" alt="logo groupomania">
     <div class="rea1__technos">
       <ul class="rea1__technos__container">
         <li>HTML</li>
-        <li>CSS</li>
         <li>SCSS</li>
         <li>VueJS</li>
         <li>NodeJS</li>
         <li>MySQL</li>
+        <li>BootstrapVue</li>
       </ul>
     </div>
     <div class="rea1__description">
@@ -79,29 +80,29 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../assets/images/css.png" class="d-block" alt="..." />
+            <img src="..\assets\images\rea1-login.jpg" class="d-block" alt="page login groupomania" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+              <h5>Page d'accueil</h5>
               <p>
-                Some representative placeholder content for the first slide.
+                Possibilité de se loguer et de s'inscrire
               </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../assets/images/nodejs.png" class="d-block" alt="..." />
+            <img src="..\assets\images\rea1-timeline.jpg" class="d-block" alt="timeline groupomania" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Node JS</h5>
-              <p>
-                Some representative placeholder content for the second slide.
+              <h5 class="black-color">Timeline</h5>
+              <p class="black-color">
+                Possibilité de commenter, ou signaler un post
               </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../assets/images/html.png" class="d-block" alt="..." />
+            <img src="../assets/images/rea1-tables.jpg" class="d-block" alt="tables mySQL" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+              <h5>Bade de données mySQL</h5>
               <p>
-                Some representative placeholder content for the third slide.
+                Capture mySQL Workbench des tables généreés avec l'ORM Sequelize
               </p>
             </div>
           </div>
@@ -125,6 +126,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    </div>
+    <div class="rea1__repo">
+      <a href="https://github.com/MathieuMer/Projet_7_Groupomania"><p>Voir le repository sur Github</p><i class="fab fa-github"></i></a>
     </div>
   </div>
 </template>
