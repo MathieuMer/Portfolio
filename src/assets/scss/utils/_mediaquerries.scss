@@ -31,6 +31,9 @@ desktop4k
 		@media screen and(max-width: $phone-maxi) and (orientation: portrait) {@content;}
 	}
 	@if $device == tab-port{
+		@media screen and(max-width: $tab-land-maxi) {@content;}
+	}
+	@if $device == tab-port{
 		@media (orientation: portrait) {@content;}
 	}
 	@if $device == 4k{

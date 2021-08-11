@@ -21,7 +21,7 @@
           <li>Base de données MongoDB Atlas</li>
         </ul>
       </div>
-      <img class="rea4__image" src="../assets/images/rea2-fonctions.jpg" alt="routes soPekocko">
+      <img class="rea4__image" src="../assets/images/reas/rea2-fonctions.jpg" alt="routes soPekocko">
       <div class="rea4__repo">
       <a href="https://github.com/MathieuMer/P6_Mathieu_MERCIER"><p>Voir le repository sur Github</p><i class="fab fa-github"></i></a>
       </div>

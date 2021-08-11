@@ -12,8 +12,10 @@
     </div>
     <div class="rea2__description">
       <p>
-        Création de A à Z de ce portfolio, des premières maquettes au crayon à la mise en ligne.
-        <br />
+        Dès la fin de la formation de Développeur Web avec Openclassrooms, j'ai décidé de construire ce portfolio.<br />
+        Ce site a été conçu en utilisant le framework javascript VUE.
+        En plus d'afficher mes réalisations, j'y ai aussi ajouté un formulaire de contact avec emailJS, et une page dédiée à mon CV.<br />
+        Utilisation de SCSS et SASS pour la gestion du style et des @media-querries.<br />
         <br />
       </p>
     </div>

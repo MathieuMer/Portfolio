@@ -23,6 +23,12 @@ html {
   font-size: 16px;
 }
 
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 @media (orientation: portrait) {
   html {
     font-size: 14px;
@@ -93,9 +99,23 @@ a {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 1023px) {
+  #bloc-page {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media (orientation: portrait) {
   #bloc-page {
     width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -109,16 +129,33 @@ main {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 1023px) {
+  main {
+    width: 100vw;
+    margin-left: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding: 0 1rem;
+    margin-top: 8rem;
+    min-height: 0;
+  }
+}
+
 @media (orientation: portrait) {
   main {
     width: 100vw;
     margin-left: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    padding: 3rem 1rem 0 1rem;
+    padding: 0 1rem;
+    margin-top: 8rem;
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  main {
+    margin-top: 7rem;
   }
 }
 
@@ -155,13 +192,12 @@ aside {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+  padding: 5rem 1rem;
   background: rgba(0, 0, 0, 0.5);
   border-right: 1px solid #ffffff31;
   -webkit-box-shadow: 0px 10px 10px #000000;
@@ -172,13 +208,51 @@ aside ul {
   list-style: none;
 }
 
-@media (orientation: portrait) {
+@media screen and (max-width: 1023px) {
   aside {
+    position: fixed;
+    height: 8rem;
     width: 100vw;
-    padding: 1rem 0;
-    margin-left: -100vw;
+    padding: 0.5rem;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-shadow: 0px 5px 5px #000000;
+            box-shadow: 0px 5px 5px #000000;
+    background: #1a1a1a;
+    z-index: 100;
+  }
+}
+
+@media (orientation: portrait) {
+  aside {
+    position: fixed;
+    height: 8rem;
+    width: 100vw;
+    padding: 0.5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-shadow: 0px 5px 5px #000000;
+            box-shadow: 0px 5px 5px #000000;
+    background: #1a1a1a;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  aside {
+    height: 7rem;
   }
 }
 
@@ -190,6 +264,16 @@ aside ul {
   font-size: 1rem;
   padding: 0.5rem 0.7rem;
   z-index: 100;
+}
+
+@media screen and (max-width: 1023px) {
+  .menu__button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    float: right;
+  }
 }
 
 @media (orientation: portrait) {
@@ -218,6 +302,12 @@ aside ul {
   color: #eb6c31;
 }
 
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .title__name {
+    font-size: 1.2rem;
+  }
+}
+
 .title__description {
   color: #FFFFFF;
   font-size: 0.9rem;
@@ -225,6 +315,31 @@ aside ul {
   letter-spacing: 0.7rem;
   padding-left: 0.4rem;
   margin-top: -0.2rem;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .title__description {
+    font-size: 0.6rem;
+    letter-spacing: 0.53rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .title {
+    padding: 0.5rem 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (orientation: portrait) {
+  .title {
+    padding: 0.5rem 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .portrait {
@@ -235,9 +350,35 @@ aside ul {
   border: 3px solid #a7a7a7;
 }
 
+@media screen and (max-width: 1023px) {
+  .portrait {
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 @media (orientation: portrait) {
   .portrait {
-    display: none;
+    border-radius: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .portrait {
+    border: 1px solid #a7a7a7;
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -245,9 +386,43 @@ nav {
   padding: 1rem 0 0 0;
 }
 
+@media screen and (max-width: 1023px) {
+  nav {
+    padding: 0;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
 @media (orientation: portrait) {
   nav {
-    padding: 3rem 0 0 0;
+    padding: 0;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (orientation: portrait) {
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -258,9 +433,21 @@ nav li {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 1023px) {
+  nav li {
+    font-size: 1.2rem;
+  }
+}
+
 @media (orientation: portrait) {
   nav li {
-    font-size: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  nav li {
+    font-size: 1.2rem;
   }
 }
 
@@ -287,6 +474,18 @@ nav li:not(.active):hover a:after {
   text-align: right;
 }
 
+@media screen and (max-width: 1023px) {
+  nav li:not(.active):hover a:after {
+    content: '';
+  }
+}
+
+@media (orientation: portrait) {
+  nav li:not(.active):hover a:after {
+    content: '';
+  }
+}
+
 nav .active {
   color: #FFFFFF;
 }
@@ -303,9 +502,23 @@ nav .active {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .nav__socials {
+    padding: 0.5rem 0 0 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 20%;
+  }
+}
+
 @media (orientation: portrait) {
   .nav__socials {
-    font-size: 2rem;
+    padding: 0.5rem 0 0 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 20%;
   }
 }
 
@@ -368,6 +581,12 @@ nav .active {
   font-family: Saira, 'Times New Roman', Times, serif;
   color: #b39c53;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 1023px) {
+  .bloc-accueil__titre h2 {
+    font-size: 1.7rem;
+  }
 }
 
 @media (orientation: portrait) {
@@ -519,22 +738,13 @@ nav .active {
   padding: 1rem;
   border: 1px solid #d8d8d8;
   border-radius: 1rem;
-}
-
-.contact-texte--verybig {
-  font-size: 2rem;
-  font-weight: bolder;
-  color: #a7a7a7;
-}
-
-.contact-texte--big {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #a7a7a7;
+  margin-top: 1rem;
 }
 
 .contact-texte--prenom {
-  text-align: right;
+  display: block;
+  width: 100%;
+  text-align: center;
   color: #a7a7a7;
 }
 
@@ -555,6 +765,12 @@ nav .active {
   width: 50%;
   margin: 0 auto;
   padding: 2rem 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .contact-form {
+    width: 75%;
+  }
 }
 
 @media (orientation: portrait) {
@@ -657,7 +873,7 @@ nav .active {
   }
 }
 
-.cv__bloc {
+.div__bloc {
   padding: 1rem;
   border: 1px solid #d8d8d8;
   border-radius: 1rem;
@@ -665,7 +881,7 @@ nav .active {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.cv__bloc h3 {
+.div__bloc h3 {
   width: 100%;
   padding: 1rem 0;
   border: 2px solid #9b7700;
@@ -674,6 +890,10 @@ nav .active {
   font-size: 1.2rem;
   font-weight: bold;
   color: #d8d8d8;
+}
+
+.cv__profil {
+  width: 100%;
 }
 
 .cv__formation {
@@ -700,7 +920,7 @@ nav .active {
 }
 
 .cv__competences {
-  width: 94%;
+  width: 100%;
 }
 
 .cv__bloc__item {
@@ -949,9 +1169,24 @@ nav .active {
   stroke-dashoffset: calc(220 - (220 * 60)/100);
 }
 
+.competence__wordpress circle:nth-child(2) {
+  stroke: #eb6c31;
+  stroke-dashoffset: calc(220 - (220 * 50)/100);
+}
+
 .rea__container {
   margin: 0;
   padding: 0;
+}
+
+.rea__container .active {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: 180%;
+}
+
+.rea__container .active h3 {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .rea__entete {
@@ -1031,21 +1266,13 @@ nav .active {
 }
 
 .rea1__miniature {
-  background-image: url("../images/rea1-timeline-mini.jpg");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.8);
   background-size: 120%;
   background-position: center;
   background-blend-mode: overlay;
-  border-radius: 1rem 0 0 1rem;
   -webkit-transition: background-size 2s;
   transition: background-size 2s;
-}
-
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .rea1__miniature {
-    border-radius: 1rem 0 0 0;
-  }
 }
 
 .rea1__miniature:hover {
@@ -1056,21 +1283,13 @@ nav .active {
 }
 
 .rea2__miniature {
-  background-image: url("../images/portfolio-mini.jpg");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.8);
   background-size: 120%;
   background-position: center;
   background-blend-mode: overlay;
-  border-radius: 0;
   -webkit-transition: background-size 2s;
   transition: background-size 2s;
-}
-
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .rea2__miniature {
-    border-radius: 0 1rem 1rem 0;
-  }
 }
 
 .rea2__miniature:hover {
@@ -1081,21 +1300,13 @@ nav .active {
 }
 
 .rea3__miniature {
-  background-image: url("../images/ohmyfood-mini.jpg");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.8);
   background-size: 120%;
   background-position: center;
   background-blend-mode: overlay;
-  border-radius: 0;
   -webkit-transition: background-size 2s;
   transition: background-size 2s;
-}
-
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .rea3__miniature {
-    border-radius: 0 0 0 1rem;
-  }
 }
 
 .rea3__miniature:hover {
@@ -1106,21 +1317,13 @@ nav .active {
 }
 
 .rea4__miniature {
-  background-image: url("../images/rea2-fonctions-mini.jpg");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.8);
   background-size: 120%;
   background-position: center;
   background-blend-mode: overlay;
-  border-radius: 0 1rem 1rem 0;
   -webkit-transition: background-size 2s;
   transition: background-size 2s;
-}
-
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  .rea4__miniature {
-    border-radius: 0 0 1rem 0;
-  }
 }
 
 .rea4__miniature:hover {
@@ -1128,6 +1331,48 @@ nav .active {
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition: background-size 2s;
   transition: background-size 2s;
+}
+
+.rea1__miniature {
+  background-image: url("../images/miniatures/rea1-timeline-mini.jpg");
+  border-radius: 1rem 0 0 1rem;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .rea1__miniature {
+    border-radius: 1rem 0 0 0;
+  }
+}
+
+.rea2__miniature {
+  background-image: url("../images/miniatures/portfolio-mini.jpg");
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .rea2__miniature {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+.rea3__miniature {
+  background-image: url("../images/miniatures/ohmyfood-mini.jpg");
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .rea3__miniature {
+    border-radius: 0 0 0 1rem;
+  }
+}
+
+.rea4__miniature {
+  background-image: url("../images/miniatures/rea2-fonctions-mini.jpg");
+  border-radius: 0 1rem 1rem 0;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .rea4__miniature {
+    border-radius: 0 0 1rem 0;
+  }
 }
 
 .rea1__logo {
@@ -1201,8 +1446,6 @@ nav .active {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: 5px;
-  -webkit-box-shadow: inset -3px -2px 5px #000000;
-          box-shadow: inset -3px -2px 5px #000000;
   background-color: #b39c53;
   font-weight: bold;
 }
@@ -1309,8 +1552,6 @@ nav .active {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: 5px;
-  -webkit-box-shadow: inset -3px -2px 5px #000000;
-          box-shadow: inset -3px -2px 5px #000000;
   background-color: #b39c53;
   font-weight: bold;
 }
@@ -1417,8 +1658,6 @@ nav .active {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: 5px;
-  -webkit-box-shadow: inset -3px -2px 5px #000000;
-          box-shadow: inset -3px -2px 5px #000000;
   background-color: #b39c53;
   font-weight: bold;
 }
@@ -1525,8 +1764,6 @@ nav .active {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: 5px;
-  -webkit-box-shadow: inset -3px -2px 5px #000000;
-          box-shadow: inset -3px -2px 5px #000000;
   background-color: #b39c53;
   font-weight: bold;
 }

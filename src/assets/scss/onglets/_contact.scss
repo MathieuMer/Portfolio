@@ -4,19 +4,12 @@
     padding: 1rem;
     border: 1px solid $light-grey2;
     border-radius: 1rem;
-}
-.contact-texte--verybig {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: $light-grey;
-}
-.contact-texte--big {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: $light-grey;
+    margin-top: 1rem;
 }
 .contact-texte--prenom {
-    text-align: right;
+    display: block;
+    width: 100%;
+    text-align: center;
     color: $light-grey;
 }
 

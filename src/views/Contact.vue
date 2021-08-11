@@ -1,9 +1,15 @@
 <template>
   <div>
-    <p class="contact-texte"><span class="contact-texte--verybig">Un projet en tête ?</span><br><span class="contact-texte--big">Besoin de renseignements ?</span><br><br>Dans tout les cas, n'hésitez pas à me contacter via ce petit formulaire.<br><br>
-      Je vous répondrai par email le plus rapidement possible. Si vous préférez par téléphone, laissez moi votre numéro dans le corps du message. Merci !<br><br>
+    <div class="cv__entete div__bloc">
+      <h2>Contact</h2>
+    </div>
+    
+    <div class="div__bloc">
+      Bonjour,<br><br>
+      Vous pouvez me contacter via ce petit formulaire, je vous répondrai par email le plus rapidement possible. Je peux aussi répondre par téléphone, dans ce cas laissez moi votre numéro dans le corps du message. Merci !<br><br>
       <span class="contact-texte--prenom">Mathieu</span>
-    </p>
+    </div>
+  
     <form class="contact-form" @submit.prevent="sendEmail">
       <label>Nom</label>
       <input class="input-style" v-model="name" type="text" name="user_name" required>

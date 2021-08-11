@@ -4,16 +4,16 @@
       <h2>Réalisations</h2>
     </div>
     <div class="rea__bloc rea__container__miniatures">
-      <div class="rea__miniature rea1__miniature" @click="showRea = 1">
+      <div class="rea__miniature rea1__miniature" @click="showRea = 1" :class="showRea == 1 ? 'active' : ''">
         <h3>Groupomania</h3>
       </div>
-      <div class="rea__miniature rea2__miniature" @click="showRea = 2">
+      <div class="rea__miniature rea2__miniature" @click="showRea = 2" :class="showRea == 2 ? 'active' : ''">
         <h3>Portfolio</h3>
       </div>
-      <div class="rea__miniature rea3__miniature" @click="showRea = 3">
+      <div class="rea__miniature rea3__miniature" @click="showRea = 3" :class="showRea == 3 ? 'active' : ''">
         <h3>OhMyfood</h3>
       </div>
-      <div class="rea__miniature rea4__miniature" @click="showRea = 4">
+      <div class="rea__miniature rea4__miniature" @click="showRea = 4" :class="showRea == 4 ? 'active' : ''">
         <h3>So Peckoko</h3>
       </div>
     </div>
@@ -45,6 +45,7 @@ export default {
   data() {
     return {
       showRea: 0,
+      isActive: false
     };
   },
   methods: {

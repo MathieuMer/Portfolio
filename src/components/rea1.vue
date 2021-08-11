@@ -2,7 +2,7 @@
   <div class="rea1__container rea__bloc">
     <h3 class="rea1__titre">Réseau Social d'entreprise: Groupomania</h3>
     <h4 class="rea1__sous-titre">Conception Front-end et Back-end</h4>
-    <img class="rea1__logo" src="../assets/images/rea1-icon-left-font-monochrome-white2.png" alt="logo groupomania">
+    <img class="rea1__logo" src="../assets/images/reas/rea1-icon-left-font-monochrome-white2.png" alt="logo groupomania">
     <div class="rea1__technos">
       <ul class="rea1__technos__container">
         <li>HTML</li>
@@ -15,8 +15,8 @@
     </div>
     <div class="rea1__description">
       <p>
-        Ce projet était le dernier projet du parcours Développeur Web
-        d'Openclassrooms, qui consistait à développer entièrement la MVP d'un
+        Dernier projet du parcours Développeur Web
+        d'Openclassrooms, consistant à développer entièrement la MVP d'un
         réseau social d'entreprise. A partir d'un cahier des charges, il a fallu
         respecter les besoins du client, dont le but était principalement
         d'améliorer l'ambiance et les relations entres tous les employés de
@@ -30,9 +30,9 @@
       <div class="rea1__description__listes">
         <ul>
           <li>Création de compte / Login</li>
-          <li>Poster un message texte et/ou image sur la Timeline publique</li>
+          <li>Poster un message texte et/ou image</li>
           <li>Preview du post avant envoi</li>
-          <li>Edition du message par son auteur</li>
+          <li>Edition et suppression du message par son auteur</li>
         </ul>
         <ul>
           <li>Système de commentaires</li>
@@ -43,10 +43,12 @@
       </div>
       <p>
         <br />
+        Technologies utilisées :<br />
+        <br />
         La partie backend du projet est conçu avec NodeJS / Express.<br />
         Pour le frontend, j'ai utilisé le framework VueJS, avec VueX et Vue
         router.<br />
-        La base de données MySQL a été crée en utilisant l'ORM Sequelize.<br />
+        La base de données MySQL a été créée en utilisant l'ORM Sequelize.<br />
         Utilisation de la bibliothèque Axios pour les appels API.
       </p>
     </div>
@@ -80,30 +82,21 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="..\assets\images\rea1-login.jpg" class="d-block" alt="page login groupomania" />
+            <img src="..\assets\images\reas\rea1-login.jpg" class="d-block" alt="page login groupomania" />
             <div class="carousel-caption d-none d-md-block">
               <h5>Page d'accueil</h5>
-              <p>
-                Possibilité de se loguer et de s'inscrire
-              </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="..\assets\images\rea1-timeline.jpg" class="d-block" alt="timeline groupomania" />
+            <img src="..\assets\images\reas\rea1-timeline.jpg" class="d-block" alt="timeline groupomania" />
             <div class="carousel-caption d-none d-md-block">
               <h5 class="black-color">Timeline</h5>
-              <p class="black-color">
-                Possibilité de commenter, ou signaler un post
-              </p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../assets/images/rea1-tables.jpg" class="d-block" alt="tables mySQL" />
+            <img src="../assets/images/reas\rea1-tables.jpg" class="d-block" alt="tables mySQL" />
             <div class="carousel-caption d-none d-md-block">
-              <h5>Bade de données mySQL</h5>
-              <p>
-                Capture mySQL Workbench des tables généreés avec l'ORM Sequelize
-              </p>
+              <h5>Base de données mySQL</h5>
             </div>
           </div>
         </div>

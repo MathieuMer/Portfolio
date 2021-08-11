@@ -8,6 +8,7 @@
     overflow-x: hidden;
     @include responsive(tab-port){
         width: 100%;
+        flex-direction: column;
     }
 }
 
@@ -23,9 +24,13 @@ main {
     @include responsive(tab-port){
         width: 100vw;
         margin-left: 0;
-        flex-grow: 1;
         transition: 0.5s;
-        padding: 3rem 1rem 0 1rem;
+        padding: 0 1rem;
+        margin-top: 8rem;
+        min-height: 0;
+    }
+    @include responsive(phone){
+        margin-top: 7rem;
     }
     
 }

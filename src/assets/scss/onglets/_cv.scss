@@ -17,7 +17,7 @@
         width: 100%;
     }
 }
-.cv__bloc {
+.div__bloc {
     //flex-grow: 1;
     padding: 1rem;
     border: 1px solid $light-grey2;
@@ -35,6 +35,9 @@
         color: $light-grey2;
     }
 }
+.cv__profil {
+    width: 100%;
+}
 .cv__formation {
     display: flex;
     flex-direction: column;
@@ -46,7 +49,7 @@
     }
 }
 .cv__competences {
-    width: 94%;
+    width: 100%;
 }
 .cv__bloc__item {
     display: flex;
@@ -227,4 +230,8 @@
 .competence__js circle:nth-child(2), .competence__vue circle:nth-child(2), .competence__nodejs circle:nth-child(2){
     stroke: $orange;
     stroke-dashoffset: calc(220 - (220 * 60)/100);
+}
+.competence__wordpress circle:nth-child(2){
+    stroke: $orange;
+    stroke-dashoffset: calc(220 - (220 * 50)/100);
 }
